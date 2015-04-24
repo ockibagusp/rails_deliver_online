@@ -1,0 +1,42 @@
+<%= content_for :content do -%>
+    <p id="notice"><%= notice %></p>
+
+    <div class="widget-box">
+      <div class="widget-header widget-header-blue widget-header-flat">
+        <h4 class="widget-title lighter"><%= @product.title %></h4>
+      </div>
+      <div class="clearfix">
+        <div class="row col-xs-12">
+          <div class="col-xs-2">
+            FOTO
+          </div>
+          <div class="col-xs-6">
+            <p>
+              <strong>Name: </strong>
+              <%= @product.title %>
+            </p>
+
+            <p>
+              <strong>Description: </strong>
+              <%= @product.description %>
+            </p>
+
+            <p>
+              <strong>Image url:</strong>
+              <%= @product.image_url %>
+            </p>
+
+            <p>
+              <strong>Price:</strong>
+              <%= @product.price %>
+            </p>
+          </div>
+        </div>
+        <a class="btn" href="/beers/">Back</a>
+      </div>
+    </div>
+
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+
+<% end -%>
